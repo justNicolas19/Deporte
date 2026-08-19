@@ -3,9 +3,10 @@ public class Corredor extends Deportista {
     private double tiempo;
 
     public Corredor(){
-
     }
-    public Corredor(double distancia, double tiempo) {
+
+    public Corredor(String nombre, int edad, String pais, int horasDeRendimiento, double distancia, double tiempo) {
+        super(nombre, edad, pais, horasDeRendimiento);
         this.distancia = distancia;
         this.tiempo = tiempo;
     }
@@ -47,6 +48,7 @@ public class Corredor extends Deportista {
         return velocidad * horasDeRendimiento;
     }
     public void mostrarDetalles(){
+        System.out.println("Nombre" + nombre);
         System.out.println("Distancia" + distancia);
         System.out.println("Tiempo" + tiempo);
     }
